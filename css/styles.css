@@ -1,0 +1,267 @@
+/*=========================== наслідування =========================*/
+body {
+    font-family: 'Roboto',
+        sans-serif;}
+
+:root {
+    --accent-color:  #2196F3;
+    --the-second-color: #FFFFFF;
+    --mine-color: #212122;
+}
+/*=========================== наслідування =========================*/
+
+/*============== Скидання браузерних стилів ==============*/
+.list {list-style: none;}
+
+.link {text-decoration: none;}
+/*============== Скидання браузерних стилів ==============*/
+
+/*================ Розміщення елементів. Flexbox. =================*/
+
+.container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*============== логотип ==============*/
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: rgb(0, 0, 0)
+}
+
+.accent {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--accent-color)
+}
+/*============== логотип ==============*/
+
+/*============== навігація ==============*/
+.menu .link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+}
+
+/*альтернативний варіант з додатковим класом в посиланнях "menu-link" */
+
+/*.menu-link {
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
+color: var(--main-color);}*/
+
+.menu .link:hover,
+.menu .link:focus {
+    color: var(--accent-color)
+}
+
+/*============== авігація ==============*/
+
+/*============== contacts in header ==============*/
+.contact-mail {
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
+color: #757575;}
+
+.contact-number {
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
+color: #757575;}
+
+
+.contact-mail:hover,
+.contact-mail:focus {color: var(--accent-color)}
+
+.contact-number:hover,
+.list .contact-number:focus {color: var(--accent-color)}
+/*============== contacts in header ==============*/
+
+/*============== секція-герой ==============*/
+.hero {background-color: #2F303A;}
+
+/*============== Основний заголовок на сторінці ==============*/
+.main-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--the-second-color);}
+/*============== Основний заголовок на сторінці ==============*/
+
+/* ============== modal button ==============*/
+.modal-button {
+     font-weight: 700;
+     font-size: 16px;
+     line-height: 1.87;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     letter-spacing: 0.06em;
+     color: var(--the-second-color);
+     background: var(--accent-color);
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+     border-radius: 4px;
+     cursor: pointer;}
+
+.modal-button:hover,
+.modal-button:focus {color: var(--accent-color); background-color:yellow}
+/*деякі зміни в кольорі фону відносно макету вніс від себе в якості есперименту і додаткового тренування*/
+/*============== modal button ==============*/
+/* ==============секція-герой ==============*/
+
+/* ============== Наши преимущества ==============*/
+.advantage {
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--main-color);}
+
+.description-advantage {
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: #757575;}
+/* ============== Наши преимущества ==============*/
+
+/* ============== Чем мы занимаемся ==============*/
+.specifics {
+font-weight: 700;
+font-size: 36px;
+line-height: 1.16;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--mine-color);}
+/* ============== Чем мы занимаемся ==============*/
+
+/* ============== Наша команда ==============*/
+.stuff {background: #F5F4FA;}
+
+.team {
+font-weight: 700;
+font-size: 36px;
+line-height: 1.16;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--main-color);}
+
+.list-team {background: var(--the-second-color);        
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+0px 1px 1px rgba(0, 0, 0, 0.14),
+0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;}
+
+.employee {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.18;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--mine-color);}
+
+.position {
+font-size: 16px;
+line-height: 1.18;
+text-align: center;
+letter-spacing: 0.03em;
+color: #757575;}
+/* ============== Наша команда ==============*/
+
+/* ============== footer ==============*/
+.footer {background-color: #2F303A;}
+/*============== logo in footer==============*/
+
+.logo-footer {font-family: 'Raleway', sans-serif;
+font-weight: 700;
+font-size: 26px;
+line-height: 1.19;
+letter-spacing: 0.03em;
+color: var(--the-second-color)}
+/*============== logo in footer==============*/
+
+.link_geolocation {
+font-style: normal;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: var(--the-second-color)}
+
+.link_contact {
+font-style: normal;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: rgba(255, 255, 255, 0.6);}
+
+.link_geolocation:hover,
+.link_geolocation:focus {color: var(--accent-color)}
+
+.link_contact:hover,
+.link_contact:focus {color: var(--accent-color)}
+/* ============== footer ==============*/
+
+/*///////////////////////////////// TWO PAGE //////////////////////*/
+
+/* ============== filters ==============*/
+.filter {font-family: 'Roboto',
+sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.62;
+text-align: center;
+letter-spacing: 0.03em;
+color: #212121;background: #F5F4FA;
+border-radius: 4px;
+border-style: none;
+cursor: pointer;}
+
+
+.filter:hover,
+.filter:focus {background-color: #2196F3; color: var(--the-second-color);
+box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+0px 1px 2px rgba(0, 0, 0, 0.08),
+0px 2px 2px rgba(0, 0, 0, 0.12);
+border-radius: 4px;}
+/* ============== filters ==============*/
+
+/* ============== elements ==============*/
+.list-item:hover,
+.list-item:focus {background: var(--the-second-color);
+border: 1px solid #EEEEEE;
+box-sizing: border-box;}
+
+.title-picture {
+font-weight: 700;
+font-size: 18px;
+line-height: 2;
+letter-spacing: 0.06em;
+color: #212121;}
+
+.portfolio_section {
+font-weight: 400;
+font-size: 16px;
+line-height: 1.87;
+letter-spacing: 0.03em;
+color: #757575;}
+/* ============== elements ==============*/
