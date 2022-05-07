@@ -1,22 +1,44 @@
 /*=========================== наслідування =========================*/
 body {
-    font-family: 'Roboto',
-        sans-serif;}
+    font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+}
 
 :root {
-    --accent-color:  #2196F3;
-    --the-second-color: #FFFFFF;
+    --accent-color: #2196f3;
+    --the-second-color: #ffffff;
     --mine-color: #212122;
 }
 /*=========================== наслідування =========================*/
 
 /*============== Скидання браузерних стилів ==============*/
-.list {list-style: none;}
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-.link {text-decoration: none;}
+.link {
+    text-decoration: none;
+}
 /*============== Скидання браузерних стилів ==============*/
 
 /*================ Розміщення елементів. Flexbox. =================*/
+.section {
+    padding-top: 94px;
+}
 
 .container {
     width: 1200px;
@@ -24,16 +46,33 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    outline: solid 2px red;
 }
 
+/*===============HEADER-START===============*/
+.header-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ececec;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+/*============== навігація ==============*/
 /*============== логотип ==============*/
 .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
 }
 
 .accent {
@@ -42,17 +81,30 @@ body {
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    color: var(--accent-color)
+    color: var(--accent-color);
 }
 /*============== логотип ==============*/
 
-/*============== навігація ==============*/
+.menu {
+    display: flex;
+}
+
 .menu .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--main-color);
+}
+
+.menu-item {
+    margin-right: 50px;
+}
+.menu-item:last-child {
+    margin-right: 0;
 }
 
 /*альтернативний варіант з додатковим класом в посиланнях "menu-link" */
@@ -66,202 +118,261 @@ color: var(--main-color);}*/
 
 .menu .link:hover,
 .menu .link:focus {
-    color: var(--accent-color)
+    color: var(--accent-color);
 }
 
-/*============== авігація ==============*/
+/*============== навігація ==============*/
 
 /*============== contacts in header ==============*/
+.header-list {
+    display: flex;
+    margin-left: auto;
+}
+
 .contact-mail {
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;
-color: #757575;}
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-right: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
+}
 
 .contact-number {
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;
-color: #757575;}
-
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
+}
 
 .contact-mail:hover,
-.contact-mail:focus {color: var(--accent-color)}
-
+.contact-mail:focus {
+    color: var(--accent-color);
+}
 .contact-number:hover,
-.list .contact-number:focus {color: var(--accent-color)}
-/*============== contacts in header ==============*/
+.list .contact-number:focus {
+    color: var(--accent-color);
+}
+/*====== contacts in header =======*/
+/*===============HEADER-END===============*/
 
 /*============== секція-герой ==============*/
-.hero {background-color: #2F303A;}
+.hero {
+    background-color: #2f303a;
+}
 
 /*============== Основний заголовок на сторінці ==============*/
+.hero-container {
+    padding: 200px 252px;
+    text-align: center;
+}
+
 .main-title {
+    width: 696px;
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--the-second-color);}
+    color: var(--the-second-color);
+}
 /*============== Основний заголовок на сторінці ==============*/
 
 /* ============== modal button ==============*/
 .modal-button {
-     font-weight: 700;
-     font-size: 16px;
-     line-height: 1.87;
-     display: flex;
-     align-items: center;
-     text-align: center;
-     letter-spacing: 0.06em;
-     color: var(--the-second-color);
-     background: var(--accent-color);
-     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-     border-radius: 4px;
-     cursor: pointer;}
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--the-second-color);
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+}
 
 .modal-button:hover,
-.modal-button:focus {color: var(--accent-color); background-color:yellow}
+.modal-button:focus {
+    color: var(--accent-color);
+    background-color: yellow;
+}
 /*деякі зміни в кольорі фону відносно макету вніс від себе в якості есперименту і додаткового тренування*/
 /*============== modal button ==============*/
 /* ==============секція-герой ==============*/
 
 /* ============== Наши преимущества ==============*/
 .advantage {
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: var(--main-color);}
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
 
 .description-advantage {
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: #757575;}
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
 /* ============== Наши преимущества ==============*/
 
 /* ============== Чем мы занимаемся ==============*/
 .specifics {
-font-weight: 700;
-font-size: 36px;
-line-height: 1.16;
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--mine-color);}
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--mine-color);
+}
 /* ============== Чем мы занимаемся ==============*/
 
 /* ============== Наша команда ==============*/
-.stuff {background: #F5F4FA;}
+.stuff {
+    background: #f5f4fa;
+}
 
 .team {
-font-weight: 700;
-font-size: 36px;
-line-height: 1.16;
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--main-color);}
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+}
 
-.list-team {background: var(--the-second-color);        
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-0px 1px 1px rgba(0, 0, 0, 0.14),
-0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px;}
+.list-team {
+    background: var(--the-second-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
 
 .employee {
-font-weight: 500;
-font-size: 16px;
-line-height: 1.18;
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--mine-color);}
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--mine-color);
+}
 
 .position {
-font-size: 16px;
-line-height: 1.18;
-text-align: center;
-letter-spacing: 0.03em;
-color: #757575;}
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
 /* ============== Наша команда ==============*/
 
 /* ============== footer ==============*/
-.footer {background-color: #2F303A;}
+.footer {
+    background-color: #2f303a;
+}
 /*============== logo in footer==============*/
 
-.logo-footer {font-family: 'Raleway', sans-serif;
-font-weight: 700;
-font-size: 26px;
-line-height: 1.19;
-letter-spacing: 0.03em;
-color: var(--the-second-color)}
+.logo-footer {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--the-second-color);
+}
 /*============== logo in footer==============*/
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 .link_geolocation {
-font-style: normal;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: var(--the-second-color)}
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--the-second-color);
+}
 
 .link_contact {
-font-style: normal;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);}
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
 
 .link_geolocation:hover,
-.link_geolocation:focus {color: var(--accent-color)}
+.link_geolocation:focus {
+    color: var(--accent-color);
+}
 
 .link_contact:hover,
-.link_contact:focus {color: var(--accent-color)}
+.link_contact:focus {
+    color: var(--accent-color);
+}
 /* ============== footer ==============*/
 
 /*///////////////////////////////// TWO PAGE //////////////////////*/
 
 /* ============== filters ==============*/
-.filter {font-family: 'Roboto',
-sans-serif;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
-text-align: center;
-letter-spacing: 0.03em;
-color: #212121;background: #F5F4FA;
-border-radius: 4px;
-border-style: none;
-cursor: pointer;}
-
+.filter {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    background: #f5f4fa;
+    border-radius: 4px;
+    border-style: none;
+    cursor: pointer;
+}
 
 .filter:hover,
-.filter:focus {background-color: #2196F3; color: var(--the-second-color);
-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-0px 1px 2px rgba(0, 0, 0, 0.08),
-0px 2px 2px rgba(0, 0, 0, 0.12);
-border-radius: 4px;}
+.filter:focus {
+    background-color: #2196f3;
+    color: var(--the-second-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
 /* ============== filters ==============*/
 
 /* ============== elements ==============*/
 .list-item:hover,
-.list-item:focus {background: var(--the-second-color);
-border: 1px solid #EEEEEE;
-box-sizing: border-box;}
+.list-item:focus {
+    background: var(--the-second-color);
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+}
 
 .title-picture {
-font-weight: 700;
-font-size: 18px;
-line-height: 2;
-letter-spacing: 0.06em;
-color: #212121;}
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: #212121;
+}
 
 .portfolio_section {
-font-weight: 400;
-font-size: 16px;
-line-height: 1.87;
-letter-spacing: 0.03em;
-color: #757575;}
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
 /* ============== elements ==============*/
