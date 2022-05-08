@@ -13,11 +13,6 @@ p {
     padding: 0;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-}
-
 img {
     display: block;
 }
@@ -41,7 +36,7 @@ img {
 }
 /*============== Скидання браузерних стилів ==============*/
 
-/*================ Розміщення елементів. Flexbox. =================*/
+/*=========== Загальні налаштування для Flexbox. =============*/
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -54,6 +49,7 @@ img {
     margin-right: auto;
     margin-left: auto;
 }
+/*========== Загальні налаштування для Flexbox. =============*/
 
 /*===============HEADER-START===============*/
 .header-container {
@@ -62,13 +58,12 @@ img {
     border-bottom: 1px solid #ececec;
 }
 
+/*============== NAVIGATION-START ==============*/
 .header-nav {
     display: flex;
     align-items: center;
 }
 
-/*============== навігація ==============*/
-/*============== логотип ==============*/
 .logo {
     padding-top: 24px;
     padding-bottom: 25px;
@@ -89,7 +84,6 @@ img {
     letter-spacing: 0.03em;
     color: var(--accent-color);
 }
-/*============== логотип ==============*/
 
 .menu {
     display: flex;
@@ -106,13 +100,6 @@ img {
     color: var(--main-color);
 }
 
-.menu-item {
-    margin-right: 50px;
-}
-.menu-item:last-child {
-    margin-right: 0;
-}
-
 /*альтернативний варіант з додатковим класом в посиланнях "menu-link" */
 
 /*.menu-link {
@@ -122,12 +109,18 @@ line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--main-color);}*/
 
+.menu-item {
+    margin-right: 50px;
+}
+.menu-item:last-child {
+    margin-right: 0;
+}
+
 .menu .link:hover,
 .menu .link:focus {
     color: var(--accent-color);
 }
-
-/*============== навігація ==============*/
+/*============== NAVIGATION-END ==============*/
 
 /*============== contacts in header ==============*/
 .header-list {
@@ -163,13 +156,13 @@ color: var(--main-color);}*/
     color: var(--accent-color);
 }
 .contact-number:hover,
-.list .contact-number:focus {
+.contact-number:focus {
     color: var(--accent-color);
 }
 /*====== contacts in header =======*/
 /*===============HEADER-END===============*/
 
-/*============== секція-герой ==============*/
+/*============== HERO-START ==============*/
 .hero {
     background-color: #2f303a;
 }
@@ -210,9 +203,8 @@ color: var(--main-color);}*/
     border-radius: 4px;
     cursor: pointer;
 }
-
 /*============== modal button ==============*/
-/* ==============   HERO ==============*/
+/* =================   HERO-END  ===================*/
 
 /* ============== Наши преимущества ==============*/
 .visually-hidden {
@@ -289,7 +281,6 @@ color: var(--main-color);}*/
 .item-activity:last-child {
     padding-right: 0;
 }
-
 /* ============== Чем мы занимаемся ==============*/
 
 /* ============== Наша команда ==============*/
@@ -321,12 +312,12 @@ color: var(--main-color);}*/
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-member {
-    margin-bottom: 30px;
-}
-
 .item-team:last-child {
     margin-right: 0;
+}
+
+.team-member {
+    margin-bottom: 30px;
 }
 
 .employee {
@@ -348,12 +339,13 @@ color: var(--main-color);}*/
 }
 /* ============== Наша команда ==============*/
 
-/* ============== footer ==============*/
+/* ============== FOOTER-START ==============*/
 .footer {
     background-color: #2f303a;
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
 /*============== logo in footer==============*/
 
 .logo-full {
@@ -404,9 +396,9 @@ color: var(--main-color);}*/
 .link_contact:focus {
     color: var(--accent-color);
 }
-/* ============== footer ==============*/
+/* ============== FOOTER-END ==============*/
 
-/*///////////////////////////////// TWO PAGE //////////////////////*/
+/*//////////////////////// TWO PAGE //////////////////////*/
 
 /* ============== filters ==============*/
 .filter-button {
@@ -451,7 +443,7 @@ color: var(--main-color);}*/
 }
 /* ============== filters ==============*/
 
-/* ============== elements ==============*/
+/* ============== CARDS ==============*/
 .portfolio-cards {
     padding-top: 0px;
 }
