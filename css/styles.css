@@ -20,7 +20,7 @@ img {
 :root {
     --accent-color: #2196f3;
     --the-second-color: #ffffff;
-    --mine-color: #212122;
+    --mine-color: #212121;
 }
 /*=========================== наслідування =========================*/
 
@@ -52,10 +52,13 @@ img {
 /*========== Загальні налаштування для Flexbox. =============*/
 
 /*===============HEADER-START===============*/
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
 .header-container {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ececec;
 }
 
 /*============== NAVIGATION-START ==============*/
@@ -120,6 +123,10 @@ color: var(--main-color);}*/
 .menu .link:focus {
     color: var(--accent-color);
 }
+
+.menu > .current {
+    color: var(--accent-color);
+}
 /*============== NAVIGATION-END ==============*/
 
 /*============== contacts in header ==============*/
@@ -128,11 +135,18 @@ color: var(--main-color);}*/
     margin-left: auto;
 }
 
-.contact-mail {
-    display: block;
+.contact-mail,
+.contact-number {
     padding-top: 32px;
     padding-bottom: 32px;
+    color: #757575;
+}
+
+.header-list-item {
     margin-right: 50px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: block;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -140,15 +154,8 @@ color: var(--main-color);}*/
     color: #757575;
 }
 
-.contact-number {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: #757575;
+.header-list-item:last-child {
+    margin-right: 0;
 }
 
 .contact-mail:hover,
@@ -164,18 +171,20 @@ color: var(--main-color);}*/
 
 /*============== HERO-START ==============*/
 .hero {
+    padding: 200px 252px;
     background-color: #2f303a;
 }
 
 /*============== Основний заголовок на сторінці ==============*/
 .hero-container {
-    padding: 200px 252px;
     text-align: center;
 }
 
 .main-title {
+    margin: 0 auto;
     max-width: 696px;
     margin-bottom: 30px;
+    text-align: center;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -187,14 +196,13 @@ color: var(--main-color);}*/
 
 /* ============== modal button ==============*/
 .modal-button {
-    width: 200px;
+    min-width: 200px;
     height: 50px;
     padding: 10px 32px;
     border: none;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--the-second-color);
@@ -279,7 +287,7 @@ color: var(--main-color);}*/
 }
 
 .item-activity:last-child {
-    padding-right: 0;
+    margin-right: 0;
 }
 /* ============== Чем мы занимаемся ==============*/
 
@@ -305,7 +313,6 @@ color: var(--main-color);}*/
 
 .item-team {
     width: 270px;
-    height: 368px;
     margin-right: 30px;
     background: var(--the-second-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -316,8 +323,8 @@ color: var(--main-color);}*/
     margin-right: 0;
 }
 
-.team-member {
-    margin-bottom: 30px;
+.imployee-details {
+    padding: 30px 10px;
 }
 
 .employee {
@@ -347,12 +354,8 @@ color: var(--main-color);}*/
 }
 
 /*============== logo in footer==============*/
-
-.logo-full {
-    margin-bottom: 20px;
-}
-
 .logo-footer {
+    display: block;
     margin-bottom: 20px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -419,7 +422,7 @@ color: var(--main-color);}*/
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--mine-color);
     background: #f5f4fa;
     border-radius: 4px;
     border-style: none;
@@ -444,9 +447,6 @@ color: var(--main-color);}*/
 /* ============== filters ==============*/
 
 /* ============== CARDS ==============*/
-.portfolio-cards {
-    padding-top: 0px;
-}
 
 .list-cards {
     display: flex;
@@ -455,7 +455,6 @@ color: var(--main-color);}*/
 
 .list-item {
     width: 370px;
-    height: 404px;
     margin-right: 30px;
     margin-bottom: 30px;
 }
@@ -475,17 +474,23 @@ color: var(--main-color);}*/
     box-sizing: border-box;
 }
 
+.text-card {
+    padding: 20px 24px;
+    border-right: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
 .title-picture {
-    margin: 20px 24px 4px;
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: #212121;
+    color: var(--mine-color);
 }
 
 .portfolio_section {
-    margin: 0px 24px 20px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
